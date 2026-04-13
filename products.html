@@ -1,55 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Petals by Dafnie - Products</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Bouquets | Blossom & Bloom</title>
+    <style>
+        :root {
+            --primary-pink: #ff85a2;
+            --soft-pink: #fbb1bd;
+            --dark-green: #2d6a4f;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #fff5f7;
+            color: #444;
+        }
+
+        header {
+            background: var(--primary-pink);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            text-align: center;
+            border: 1px solid #ffe0e6;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Gradient Placeholder instead of Image */
+        .image-placeholder {
+            height: 200px;
+            background: linear-gradient(135deg, var(--soft-pink), var(--primary-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+
+        .details {
+            padding: 20px;
+        }
+
+        .details h3 {
+            margin: 0 0 10px 0;
+            color: var(--dark-green);
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d81b60;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            background: var(--dark-green);
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #1b4332;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
- <nav>
-  <div class="logo">
-    <img src="logo.png" alt="Bloomie Boo Logo">
-  </div>
-<h1 class="page-title">Petals by Dafnie 🌸</h1>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="about-us.html">About-Us</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  </nav>
 
-  <div class="container">
-    <h2>Our Flowers</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="Flower1.png" alt="Rose Bouquet">
-        <div class="card-content">
-          <h3>Rose Bouquet</h3>
-          <p>500</p>
-          <button class="btn">Add to Cart</button>
+    <header>
+        <h1>🌸 Blossom & Bloom</h1>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Bouquets</a>
         </div>
-      </div>
+    </header>
 
-      <div class="card">
-        <span class="badge">Best Seller ✨</span>
-        <img src="Flower3.png" alt="Tulip ">
-        <div class="card-content">
-          <h3>Tulip Bundle</h3>
-          <p>450</p>
-          <button class="btn">Add to Cart</button>
-        </div>
-      </div>
+    <div class="container">
+        <h2 style="text-align: center; color: var(--dark-green);">Our Best Sellers</h2>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="image-placeholder">🌹</div>
+                <div class="details">
+                    <h3>Classic Red Roses</h3>
+                    <p>Twelve premium red roses with elegant wrapping.</p>
+                    <p class="price">₱1,500</p>
+                    <a href="https://wa.me/yournumber" class="btn buy-btn">Order via WhatsApp</a>
+                </div>
+            </div>
 
-      <div class="card">
-        <img src="Flower2.png" alt="Sunflower ">
-        <div class="card-content">
-          <h3>Sunflower Basket</h3>
-          <p>350</p>
-          <button class="btn">Add to Cart</button>
+            <div class="product-card">
+                <div class="image-placeholder">🌻</div>
+                <div class="details">
+                    <h3>Sunny Sunflower</h3>
+                    <p>Brighten their day with our large sunflower bouquet.</p>
+                    <p class="price">₱1,200</p>
+                    <a href="#" class="btn buy-btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-placeholder">🌷</div>
+                <div class="details">
+                    <h3>Pastel Tulip Dream</h3>
+                    <p>Soft-colored tulips perfect for anniversaries.</p>
+                    <p class="price">₱2,200</p>
+                    <a href="#" class="btn buy-btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-placeholder">💐</div>
+                <div class="details">
+                    <h3>Mixed Wildflowers</h3>
+                    <p>A rustic and colorful mix of seasonal blooms.</p>
+                    <p class="price">₱950</p>
+                    <a href="#" class="btn buy-btn">Order Now</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
+    <footer>
+        &copy; 2026 Blossom & Bloom Bouquet Shop | Created with Love
+    </footer>
 
 </body>
 </html>
